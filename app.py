@@ -36,7 +36,7 @@ def model():
 	
 
 
-@app.route("/predict/",methods=['POST','GET'])
+@app.route("/predict",methods=['POST','GET'])
 def predict():
 
 	cities = pickle.load(open("city.pkl","rb"))
