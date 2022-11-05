@@ -23,7 +23,6 @@ def model():
  
 	if request.method == 'POST':
 		name=  request.form['username']
-		print(name)
 		return render_template("model_file.html",data=list(cities.keys()),username=name)
 	else:
 
@@ -36,7 +35,7 @@ def model():
 	
 
 
-@app.route("/predict/",methods=['POST','GET'])
+@app.route("/predict",methods=['POST','GET'])
 def predict():
 
 	cities = pickle.load(open("city.pkl","rb"))
@@ -73,4 +72,4 @@ def predict():
 
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug=True)
