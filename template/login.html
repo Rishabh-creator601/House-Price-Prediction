@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Login Portal </title>
+  <meta charset="UTF-8">
+  <title>Login Portal</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-
-	<form action="https://house-pp.herokuapp.com/model" method='post'>
-          
-
-         <p>Enter Name:  </p>
-		<input  type='text' name="username">
-
-
-		<p><input type = "submit" value = "submit" /></p>
-
+<!-- : ) ! -->
+<div class="box-form">
+	<div class="left">
+		<div class="overlay">
+		<p>Welcome To House Price Prediction page  <br />  Just Write your Name</p>
+		</div>
+	</div>
+	
+	
+		<div class="right">
 		
-
-
-	</form>
-
+		<form class="inputs"  action="http://house-pp.herokuapp.com/model">
+			<input type="text" placeholder="user name" name='username'>
+		</form>
+			
+			<br><br>
+			
+			
+			<br>
+			<input type="submit"  value ="Model ->" />
+	</div>
+	
+</div>
+<!-- partial -->
+  
 </body>
 </html>
