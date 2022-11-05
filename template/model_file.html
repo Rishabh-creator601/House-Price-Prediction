@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+
+body{
+	background:black;
+
+}
+
+div{
+	font-size: 24px;
+}
+
+#input_model{
+	font-size: 24px;
+	background-color: red;
+	color: white;
+	border-radius: 50px solid black;
+}
+
+p{
+	color: yellow;
+}
+
+</style>
+	<title>House Price Prediction Model</title>
+</head>
+<body text='white'>
+
+
+	<center><h1> Hello {{ username }} </h1></center>
+	
+
+	<div>
+
+
+
+	<form method="post" action='http://localhost:5000/predict'> 
+
+
+    <center>
+	<label  for='floors'>No of Floors:</label>
+	
+		<select id ='floors' name='floors'>
+			<option value='1'> 1 Floor </option>
+			<option value='2'> 2 Floor </option>
+			<option value='3'> 3 Floor </option>
+		</select>
+
+
+	<br />
+
+	<label  for='bedrooms'>No of Bedrooms:</label>
+	
+		<select id ='bedrooms' name='bedrooms'>
+			<option value='0'> No Bedroom </option>
+			<option value='1'> 1 Bedroom </option>
+			<option value='2'> 2 Bedroom </option>
+			<option value='3'> 3 Bedroom </option>
+			<option value='4'> 4 Bedroom </option>
+			<option value='5'> 5 Bedroom </option>
+			<option value='6'> 6 Bedroom </option>
+			<option value='7'> 7 Bedroom </option>
+			<option value='8'> 8 Bedroom </option>
+			<option value='9'> 9 Bedroom </option>
+		</select>
+
+
+	<br />
+
+
+	<label  for='Bathrooms'>No of Bathrooms:</label>
+	
+		<select id ='bathrooms' name='bathrooms'>
+			<option value='0'> No Bathroom </option>
+			<option value='1'> 1 Bathrooms </option>
+			<option value='2'> 2 Bathrooms </option>
+			<option value='3'> 3 Bathrooms </option>
+			<option value='4'> 4 Bathrooms </option>
+			<option value='5'> 5 Bathrooms </option>
+			<option value='6'> 6 Bathrooms </option>
+			<option value='7'> 7 Bathrooms </option>
+			<option value='8'> 8 Bathrooms </option>
+		</select>
+
+
+
+	<br />
+
+
+	<label  for='condition'>Condition of House:</label>
+	
+		<select id ='condition' name='condition'>
+			<option value='1'> Very Low (1) </option>
+			<option value='2'> Low (2) </option>
+			<option value='3'> Moderate (3) </option>
+			<option value='4'> Good (4) </option>
+			<option value='5'> Exscellent (5) </option>
+		</select>
+
+
+
+	<br />
+
+    	
+    	<label for ='sqft_living'>Sqft of living Room :</label>
+    	<input type="number"  value ="400" name='sqft_living' id='sqft_living' min="400" max ="13000"/>
+
+
+
+    <br />
+
+    	
+    	<label for ='sqft_above'>Sqft of Upper Room :</label>
+    	<input type="number"  value ="400" name='sqft_above' id='sqft_above' min="400" max ="9000"/>
+
+
+
+
+
+
+
+
+    <br />
+
+
+
+    	<label for ='sqft_lot'>Sqft Lot :</label>
+    	<input type="number"  value ="700" name='sqft_lot' id='sqft_lot' min="700" max ="10000"/>
+    
+    <br />
+
+
+
+    <label for ="city"> Select A city :</label>
+    <select  id='city' name='city'>
+
+    	{%  for  city in data %}
+
+    	<option value  = {{city}}> {{ city }} </option>
+
+
+    	{%   endfor %}
+    	
+    </select>
+
+
+
+    </center>
+
+
+
+
+
+
+    <br />
+
+    <center><input type="submit" value="PREDICT"  id="input_model"></center>
+
+
+    </form>
+
+<center><p> {{pred}} </p></center>
+
+
+	</div>
+
+    
+</body>
+</html>

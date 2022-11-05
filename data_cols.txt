@@ -1,0 +1,14 @@
+price:0-26590000
+bedrooms:0-9
+bathrooms:0-8
+sqft_living:370-13540
+sqft_lot:638-1074218
+floors:1-3
+condition:1-5
+sqft_above:370-9410
+city_new:0-43
+
+
+
+'price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors',
+       'condition', 'sqft_above', 'city_new'
