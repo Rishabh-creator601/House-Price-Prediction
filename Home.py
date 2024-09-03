@@ -54,8 +54,8 @@ st.header("About Model")
 
 st.markdown(""" **Model** : **RandomForestRegressor** \n
 **Accuracy : 87%** \n
-You can further make predictions on : \n
-And explore about data on :  """)
+You can further make predictions on : [prediction](https://housepredprice.streamlit.app/Prediction) \n
+And explore about data on : [data](https://housepredprice.streamlit.app/data)  """)
 
 
 
